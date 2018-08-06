@@ -1,0 +1,14 @@
+Foodmap:
+-tela inicial com tempo, muda para mapa, filtra para tipo de restaurante perto da localizção, e a foto do data;
+-precisa ser versao mobile;
+
+- 576px;
+
+- layout aberto, não precisa igual, só precisa ter os campos obrigatarios, logo, filtros de restaurantes, mapa, fotos,  modal;
+- modal quando clica na foto; 
+-  uso de jquery para filtro e manipulação do DOM;
+mostrar funcionando:
+- tela de inicialização;
+-filtro com pin no mapa;
+-modal; 
+

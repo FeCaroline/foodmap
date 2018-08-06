@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://file.myfontastic.com/SsXgvxcEtcBGqKuDA7oj3n/icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Home</title>
-  </head>
-  <body>
+</head>
 
+<body>
+    <div class="row">
+        <div class="splash col-sm-md-12">
+            <h1 class="center">Foodmap</h1>
+        </div>
 
+        <div class="logo col-sm-md-12 ">
+            <h2>Foodmap</h2>
+            <div id="map"></div>
+            <br>
+            <form class="navbar-form navbar-center" role="search">
+              <div class="form-group input-search mt-3">
+                <input type="text" class="form-control input-text mb-2" placeholder="O que gostaria de comer?" id="search-text" >
+                <button type="button" class="btn btn-default icon-search" id="restaurant-search"></button>
+              </div>
+            </form>
+            <br>
+            <div class="row">
+                <div class="col-sm-12 restaurants" id="restaurants"></div>
+            </div>
+        </div>
 
+    </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <div id="map"></div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        <p class="description-restaurant"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Pedir Agora</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- O script comentado é o do Google maps -->
-    <!-- <script async defer  src="https://maps.googleapis.com/maps/api/js?key=<sua-chave-da-API>&callback=<sua-funcao-de-inicio>">
-    </script> -->  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
-  </body>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT2mmKyiSsfTwTT5chdPe59BQfm8ON8LA&callback=initMap">
+    </script>
+</body>
+
 </html>
